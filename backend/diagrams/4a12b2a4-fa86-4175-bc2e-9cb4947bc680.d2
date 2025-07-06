@@ -1,0 +1,47 @@
+direction: right
+
+Hostel_Management_System: {
+  shape: cloud
+  label: "Hostel Management System"
+}
+
+Reception: {
+  shape: rectangle
+  label: "Reception"
+}
+
+Student_Database: {
+  shape: cylinder
+  label: "Student Database"
+}
+
+Room_Allocation: {
+  shape: rectangle
+  label: "Room Allocation"
+}
+
+Payment_Module: {
+  shape: rectangle
+  label: "Payment Module"
+}
+
+Maintenance_Module: {
+  shape: rectangle
+  label: "Maintenance Module"
+}
+
+Reports_Module: {
+  shape: rectangle
+  label: "Reports Module"
+}
+
+
+Hostel_Management_System -> Reception: "Handles requests"
+Reception -> Student_Database: "Accesses data"
+Reception -> Room_Allocation: "Allocates rooms"
+Reception -> Payment_Module: "Processes payments"
+Reception -> Maintenance_Module: "Reports issues"
+Room_Allocation -> Student_Database: "Updates data"
+Payment_Module -> Student_Database: "Updates data"
+Maintenance_Module -> Student_Database: "Updates data"
+Reports_Module -> Student_Database: "Generates reports"

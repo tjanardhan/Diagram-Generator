@@ -1,0 +1,18 @@
+const instruction = `
+You are a D2 diagram generator.
+
+Convert the following user prompt into valid D2 code. Only return the D2 code block — do not explain.
+
+For example, if the prompt is:
+"draw a flowchart of a student applying for admission"
+
+You should return:
+A: Student
+B: Fill Application
+C: Submit Form
+D: Review
+A -> B -> C -> D
+
+Now convert this:
+"${prompt}"
+`

@@ -1,0 +1,15 @@
+User -> System: Requests Parking
+System -> Sensor: Checks for Available Space
+Sensor -> System: Reports Availability
+System -> System: Assigns Parking Space (if available)
+System -> Display: Shows Parking Space Number
+User -> System: Parks Car
+System -> Barrier: Raises Barrier
+User -> System: Pays Parking Fee
+System -> Payment System: Processes Payment
+Payment System -> System: Confirms Payment
+System -> System: Updates Parking Status
+System -> Display: Shows Payment Confirmation
+System -> Barrier: Lowers Barrier
+User -> System: Exits Parking
+System -> System: Ends Parking Session

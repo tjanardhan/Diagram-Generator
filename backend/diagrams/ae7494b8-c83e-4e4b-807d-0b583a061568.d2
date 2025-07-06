@@ -1,0 +1,67 @@
+direction: down
+
+OSI_Model: "OSI Model" {
+  shape: hexagon
+  style: {
+    fill: lightcoral
+    shadow: true
+    font-size: 20
+  }
+}
+
+Layer7_Application: "Application Layer\n(HTTP, SMTP, FTP)" {
+  shape: rectangle
+  style: {
+    fill: lightblue
+  }
+}
+
+Layer6_Presentation: "Presentation Layer\n(Data Formatting, Encryption)" {
+  shape: rectangle
+  style: {
+    fill: lightgreen
+  }
+}
+
+Layer5_Session: "Session Layer\n(Session Management)" {
+  shape: rectangle
+  style: {
+    fill: lightyellow
+  }
+}
+
+Layer4_Transport: "Transport Layer\n(TCP, UDP)" {
+  shape: rectangle
+  style: {
+    fill: lightpink
+  }
+}
+
+Layer3_Network: "Network Layer\n(IP Addressing, Routing)" {
+  shape: rectangle
+  style: {
+    fill: lightsalmon
+  }
+}
+
+Layer2_Data_Link: "Data Link Layer\n(MAC Addresses, Error Detection)" {
+  shape: rectangle
+  style: {
+    fill: lightcyan
+  }
+}
+
+Layer1_Physical: "Physical Layer\n(Bits, Cables)" {
+  shape: rectangle
+  style: {
+    fill: lavender
+  }
+}
+
+OSI_Model -> Layer7_Application
+Layer7_Application -> Layer6_Presentation
+Layer6_Presentation -> Layer5_Session
+Layer5_Session -> Layer4_Transport
+Layer4_Transport -> Layer3_Network
+Layer3_Network -> Layer2_Data_Link
+Layer2_Data_Link -> Layer1_Physical

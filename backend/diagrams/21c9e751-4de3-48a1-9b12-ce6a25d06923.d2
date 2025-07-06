@@ -1,0 +1,89 @@
+direction: right
+
+website: {
+  shape: cloud
+  style: {
+    fill: lightblue
+  }
+  label: "Parking Lot Management System Website"
+}
+
+website -> user_registration: "User Registration"
+
+user_registration: {
+  shape: rectangle
+  style: {
+    fill: lightyellow
+  }
+  label: "User Registration Module"
+}
+
+user_registration -> user_database: "Stores user data"
+
+user_database: {
+  shape: cylinder
+  style: {
+    fill: lightcoral
+  }
+  label: "User Database"
+}
+
+website -> parking_space_management: "Parking Space Management"
+
+parking_space_management: {
+  shape: rectangle
+  style: {
+    fill: lightyellow
+  }
+  label: "Parking Space Management Module"
+}
+
+parking_space_management -> parking_database: "Manages parking spaces"
+
+parking_database: {
+  shape: cylinder
+  style: {
+    fill: lightcoral
+  }
+  label: "Parking Database"
+}
+
+website -> payment_processing: "Payment Processing"
+
+payment_processing: {
+  shape: rectangle
+  style: {
+    fill: lightyellow
+  }
+  label: "Payment Processing Module"
+}
+
+payment_processing -> payment_gateway: "Processes payments"
+
+payment_gateway: {
+  shape: hexagon
+  style: {
+    fill: lightgreen
+  }
+  label: "Payment Gateway"
+}
+
+website -> reports_and_analytics: "Reports and Analytics"
+
+reports_and_analytics: {
+  shape: rectangle
+  style: {
+    fill: lightyellow
+  }
+  label: "Reports and Analytics Module"
+}
+
+reports_and_analytics -> reports_database: "Generates reports"
+
+reports_database: {
+  shape: cylinder
+  style: {
+    fill: lightcoral
+  }
+  label: "Reports Database"
+}

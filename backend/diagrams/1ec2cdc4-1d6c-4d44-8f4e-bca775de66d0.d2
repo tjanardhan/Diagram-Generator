@@ -1,0 +1,77 @@
+direction: down
+
+start: "Start" {
+  shape: hexagon
+  style: {
+    fill: lightgreen
+    shadow: true
+  }
+}
+
+login: "Login" {
+  shape: cloud
+  style: {
+    fill: lightblue
+  }
+}
+
+search_books: "Search Books" {
+  shape: rectangle
+  style: {
+    fill: lightyellow
+  }
+}
+
+view_details: "View Details" {
+  shape: cylinder
+  style: {
+    fill: lightpink
+  }
+}
+
+borrow_book: "Borrow Book" {
+  shape: cloud
+  style: {
+    fill: lightblue
+  }
+}
+
+return_book: "Return Book" {
+  shape: cloud
+  style: {
+    fill: lightcoral
+  }
+}
+
+manage_account: "Manage Account" {
+  shape: person
+  style: {
+    fill: lightgray
+  }
+}
+
+logout: "Logout" {
+  shape: hexagon
+  style: {
+    fill: lightgreen
+    shadow: true
+  }
+}
+
+end: "End" {
+  shape: hexagon
+  style: {
+    fill: lightgreen
+    shadow: true
+  }
+}
+
+start -> login
+login -> search_books
+search_books -> view_details
+view_details -> borrow_book
+borrow_book -> manage_account
+manage_account -> return_book
+return_book -> manage_account
+manage_account -> logout
+logout -> end

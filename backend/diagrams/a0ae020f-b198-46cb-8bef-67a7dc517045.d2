@@ -1,0 +1,94 @@
+direction: down
+
+ceo: {
+  shape: person
+  label: "CEO"
+  style: {
+    fill: lightcoral
+    shadow: true
+  }
+}
+
+vp_engineering: {
+  shape: person
+  label: "VP Engineering"
+  style: {
+    fill: lightblue
+  }
+}
+
+vp_marketing: {
+  shape: person
+  label: "VP Marketing"
+  style: {
+    fill: lightgreen
+  }
+}
+
+vp_finance: {
+  shape: person
+  label: "VP Finance"
+  style: {
+    fill: lightyellow
+  }
+}
+
+engineering_managers: {
+  shape: person
+  label: "Engineering Managers"
+  style: {
+    fill: lightsalmon
+  }
+}
+
+marketing_managers: {
+  shape: person
+  label: "Marketing Managers"
+  style: {
+    fill: lightcyan
+  }
+}
+
+finance_managers: {
+  shape: person
+  label: "Finance Managers"
+  style: {
+    fill: lavender
+  }
+}
+
+engineers: {
+  shape: person
+  label: "Engineers"
+  style: {
+    fill: lightgray
+  }
+}
+
+marketers: {
+  shape: person
+  label: "Marketers"
+  style: {
+    fill: lightpink
+  }
+}
+
+finance_staff: {
+  shape: person
+  label: "Finance Staff"
+  style: {
+    fill: lightgoldenrodyellow
+  }
+}
+
+ceo -> vp_engineering
+ceo -> vp_marketing
+ceo -> vp_finance
+
+vp_engineering -> engineering_managers
+vp_marketing -> marketing_managers
+vp_finance -> finance_managers
+
+engineering_managers -> engineers
+marketing_managers -> marketers
+finance_managers -> finance_staff

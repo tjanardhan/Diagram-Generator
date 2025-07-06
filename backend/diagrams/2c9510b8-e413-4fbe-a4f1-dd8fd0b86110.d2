@@ -1,0 +1,23 @@
+direction: down
+
+start: "Start" {shape: hexagon style: {fill: lightgreen stroke: darkgreen}}
+input_num1: "Input num1" {shape: cloud style: {fill: lightblue stroke: darkblue}}
+input_num2: "Input num2" {shape: cloud style: {fill: lightyellow stroke: darkorange}}
+input_num3: "Input num3" {shape: cloud style: {fill: lightpink stroke: darkred}}
+compare1: "Compare num1 and num2" {shape: circle style: {fill: lightcoral stroke: brown}}
+max1: "num1 > num2?" {shape: diamond style: {fill: palegoldenrod stroke: darkgoldenrod}}
+compare2: "Compare max1 and num3" {shape: circle style: {fill: lightsalmon stroke: firebrick}}
+max2: "max1 > num3?" {shape: diamond style: {fill: palegreen stroke: darkgreen}}
+output: "Output Largest Number" {shape: cylinder style: {fill: lightcyan stroke: teal}}
+
+start -> input_num1
+input_num1 -> input_num2
+input_num2 -> input_num3
+input_num3 -> compare1
+compare1 -> max1
+max1 -> compare2: "Yes"
+max1 -> compare2: "No" {label: "max1 = num2"}
+
+compare2 -> max2
+max2 -> output: "Yes"
+max2 -> output: "No" {label: "Largest = num3"}

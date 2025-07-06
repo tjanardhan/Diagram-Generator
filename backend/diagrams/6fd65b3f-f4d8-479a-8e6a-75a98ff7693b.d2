@@ -1,0 +1,11 @@
+graph LR
+    A[Start] --> B{Input three numbers: num1, num2, num3};
+    B --> C{if num1 > num2};
+    C -- Yes --> D{if num1 > num3};
+    C -- No --> E{if num2 > num3};
+    D -- Yes --> F[num1 is greatest];
+    D -- No --> F2[num3 is greatest];
+    E -- Yes --> F;
+    E -- No --> F2;
+    F --> G[End];
+    F2 --> G;

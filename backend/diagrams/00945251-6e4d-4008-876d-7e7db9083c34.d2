@@ -1,0 +1,14 @@
+College -> Librarian: Request Book
+Librarian -> Database: Search Book
+Database --> Librarian: Book Availability
+Librarian --> College: Book Available/Not Available
+College -> Librarian: Borrow Book
+Librarian --> College: Issue Book
+College --> Librarian: Return Book
+Librarian --> Database: Update Database
+Database --> Librarian: Database Updated
+Librarian --> College: Book Returned
+College --> Librarian: Renew Book
+Librarian --> Database: Check for Renewal
+Database --> Librarian: Renewal Possible/Not Possible
+Librarian --> College: Book Renewed/Renewal Not Possible

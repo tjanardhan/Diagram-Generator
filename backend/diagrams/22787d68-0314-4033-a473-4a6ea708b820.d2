@@ -1,0 +1,75 @@
+direction: down
+
+start: "Start" {
+  shape: hexagon
+  style: {
+    fill: lightgreen
+    shadow: true
+  }
+}
+
+receive_goods: "Receive Goods" {
+  shape: cloud
+  style: {
+    fill: lightblue
+  }
+}
+
+check_goods: "Check Goods" {
+  shape: diamond
+  style: {
+    fill: lightcoral
+  }
+}
+
+store_goods: "Store Goods" {
+  shape: rectangle
+  style: {
+    fill: lightyellow
+  }
+}
+
+reject_goods: "Reject Goods" {
+  shape: rectangle
+  style: {
+    fill: lightcoral
+  }
+}
+
+picking_order: "Picking Order" {
+  shape: cloud
+  style: {
+    fill: lightblue
+  }
+}
+
+packing_order: "Packing Order" {
+  shape: rectangle
+  style: {
+    fill: lightyellow
+  }
+}
+
+shipping_order: "Shipping Order" {
+  shape: rectangle
+  style: {
+    fill: lightyellow
+  }
+}
+
+end: "End" {
+  shape: hexagon
+  style: {
+    fill: lightgreen
+    shadow: true
+  }
+}
+
+start -> receive_goods
+receive_goods -> check_goods
+check_goods -> store_goods: "OK"
+check_goods -> reject_goods: "Not OK"
+store_goods -> picking_order
+picking_order -> packing_order
+packing_order -> shipping_order
+shipping_order -> end

@@ -1,0 +1,61 @@
+direction: right
+
+style: {
+  fill: lightblue
+  stroke: navy
+  stroke-width: 2
+}
+
+inventory_items: {
+  shape: stored_data
+  label: "Inventory Items"
+  style: {
+    fill: lightgreen
+  }
+}
+
+add_items: {
+  shape: cloud
+  label: "Add Items"
+  style: {
+    fill: lightcoral
+  }
+}
+
+update_items: {
+  shape: cloud
+  label: "Update Items"
+  style: {
+    fill: lightsalmon
+  }
+}
+
+remove_items: {
+  shape: cloud
+  label: "Remove Items"
+  style: {
+    fill: lightpink
+  }
+}
+
+view_inventory: {
+  shape: document
+  label: "View Inventory"
+  style: {
+    fill: lightgoldenrodyellow
+  }
+}
+
+generate_reports: {
+  shape: document
+  label: "Generate Reports"
+  style: {
+    fill: lightcyan
+  }
+}
+
+add_items -> inventory_items
+update_items -> inventory_items
+remove_items -> inventory_items
+inventory_items -> view_inventory
+inventory_items -> generate_reports

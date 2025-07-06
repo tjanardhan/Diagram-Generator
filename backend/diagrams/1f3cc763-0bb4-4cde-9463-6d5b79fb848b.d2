@@ -1,0 +1,34 @@
+direction: right
+
+users: {
+  shape: person
+  label: "Users"
+}
+
+restaurants: {
+  shape: house
+  label: "Restaurants"
+}
+
+orders: {
+  shape: rectangle
+  label: "Orders"
+}
+
+payments: {
+  shape: database
+  label: "Payments"
+}
+
+delivery_tracking: {
+  shape: cloud
+  label: "Delivery Tracking"
+}
+
+users -> orders: "Places Order"
+orders -> restaurants: "Order Details"
+restaurants -> orders: "Order Confirmation"
+orders -> payments: "Payment Information"
+payments -> orders: "Payment Status"
+orders -> delivery_tracking: "Order Location"
+delivery_tracking -> users: "Delivery Updates"

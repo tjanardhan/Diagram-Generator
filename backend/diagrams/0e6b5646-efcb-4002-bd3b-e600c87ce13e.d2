@@ -1,0 +1,19 @@
+direction: down
+
+start: "Start" {shape: hexagon}
+add_book: "Add Book" {shape: cloud}
+search_book: "Search Book" {shape: cloud}
+borrow_book: "Borrow Book" {shape: cloud}
+return_book: "Return Book" {shape: cloud}
+display_books: "Display Books" {shape: cloud}
+exit: "Exit" {shape: hexagon}
+
+start -> add_book
+add_book -> search_book
+search_book -> borrow_book
+borrow_book -> return_book
+return_book -> display_books
+display_books -> search_book
+search_book -> exit
+add_book -> display_books
+return_book -> exit

@@ -1,0 +1,66 @@
+direction: right
+
+inventory: {
+  shape: stored_data
+  label: "Inventory"
+  style: {
+    fill: lightblue
+  }
+}
+
+add_item: {
+  shape: rectangle
+  label: "Add Item"
+  style: {
+    fill: lightyellow
+  }
+}
+
+update_item: {
+  shape: rectangle
+  label: "Update Item"
+  style: {
+    fill: lightyellow
+  }
+}
+
+remove_item: {
+  shape: rectangle
+  label: "Remove Item"
+  style: {
+    fill: lightyellow
+  }
+}
+
+check_stock: {
+  shape: rectangle
+  label: "Check Stock"
+  style: {
+    fill: lightyellow
+  }
+}
+
+generate_report: {
+  shape: rectangle
+  label: "Generate Report"
+  style: {
+    fill: lightyellow
+  }
+}
+
+add_item -> inventory
+update_item -> inventory
+remove_item -> inventory
+check_stock -> inventory
+generate_report -> inventory
+
+user: {
+  shape: person
+  label: "User"
+}
+
+user -> add_item
+user -> update_item
+user -> remove_item
+user -> check_stock
+user -> generate_report

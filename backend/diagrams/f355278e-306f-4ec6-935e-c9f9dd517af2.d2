@@ -1,0 +1,65 @@
+Here's an example of generating a flowchart for a Warehouse Management System (WMS) using D2, where various shapes will be used for different purposes:
+
+```d2
+direction: right
+
+start: "Start" { shape: hexagon }
+receive: "Receive Incoming Goods" { shape: cloud }
+verify: "Verify Goods" { shape: document }
+store: "Store Goods" { shape: cylinder }
+pick: "Pick Orders" { shape: hexagon }
+pack: "Pack Orders" { shape: square }
+ship: "Ship Orders" { shape: parallelogram }
+
+start -> receive
+receive -> verify
+verify -> store
+
+store -> pick
+pick -> pack
+pack -> ship
+ship -> end
+```
+
+For SQL diagrams:
+
+```d2
+# Warehouse Management System
+
+warehouses: {
+  shape: sql_table
+  title: "Warehouses"
+  columns: [
+    "id",
+    "name"
+  ]
+}
+
+warehouse_products: {
+  shape: sql_table
+  title: "Warehouse Products"
+  columns: [
+    "id",
+    "product_id",
+    "warehouse_id",
+    "quantity"
+  ]
+  foreign-keys: {
+    "warehouse_id": {
+      table: "warehouses",
+      column: "id"
+    }
+  }
+}
+
+products: {
+  shape: sql_table
+  title: "Products"
+  columns: [
+    "id",
+    "name"
+  ]
+}
+```
+
+These examples demonstrate the use of various shapes in D2 diagrams, as well as customizing the style of nodes and SQL-related diagrams.

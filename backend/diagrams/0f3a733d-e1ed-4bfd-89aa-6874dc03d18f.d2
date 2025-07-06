@@ -1,0 +1,10 @@
+graph LR
+    A[Customer] --> B{Browse Products};
+    B --> C[Add to Cart];
+    C --> D{View Cart};
+    D --> E[Checkout];
+    E --> F{Payment};
+    F --> G[Order Confirmation];
+    G --> H[Order Processing];
+    H --> I{Shipping};
+    I --> J[Delivery];

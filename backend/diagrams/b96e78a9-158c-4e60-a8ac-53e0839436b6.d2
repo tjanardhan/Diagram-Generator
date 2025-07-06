@@ -1,0 +1,19 @@
+D2:
+{
+  nodes: [
+    { id: "CentralHub", label: "Central Hub", shape: "circle", fill: "#e74c3c" },
+    { id: "Computer1", label: "Computer 1", shape: "rectangle" },
+    { id: "Computer2", label: "Computer 2", shape: "rectangle" },
+    { id: "Computer3", label: "Computer 3", shape: "rectangle" },
+    { id: "Computer4", label: "Computer 4", shape: "rectangle" },
+    { id: "Computer5", label: "Computer 5", shape: "rectangle" }
+  ],
+  edges: [
+    { source: "CentralHub", target: "Computer1" },
+    { source: "CentralHub", target: "Computer2" },
+    { source: "CentralHub", target: "Computer3" },
+    { source: "CentralHub", target: "Computer4" },
+    { source: "CentralHub", target: "Computer5" }
+  ],
+  layout: "dagre"
+}

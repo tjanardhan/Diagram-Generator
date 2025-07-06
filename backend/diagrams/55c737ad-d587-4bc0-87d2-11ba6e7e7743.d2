@@ -1,0 +1,14 @@
+graph TD
+    A[Start] --> B{Input num1, num2, num3};
+    B --> C{num1 > num2?};
+    C -- Yes --> D{num1 > num3?};
+    C -- No --> E{num2 > num3?};
+    D -- Yes --> F[num1 is greatest];
+    D -- No --> F;
+    E -- Yes --> G[num2 is greatest];
+    E -- No --> H[num3 is greatest];
+    F --> I[End];
+    G --> I;
+    H --> I;
+
+layout: dagre

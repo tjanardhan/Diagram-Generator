@@ -1,0 +1,26 @@
+graph LR
+    A[Start] --> B{Input three numbers: num1, num2, num3};
+    B --> C{if num1 > num2};
+    C -- Yes --> D{if num1 > num3};
+    D -- Yes --> E[num1 is the largest];
+    D -- No --> F[num3 is the largest];
+    C -- No --> G{if num2 > num3};
+    G -- Yes --> H[num2 is the largest];
+    G -- No --> F;
+    E --> I[End];
+    F --> I;
+    H --> I;
+
+subgraph ""
+    A{fill:#f9f,stroke:#333,text-color:#000}
+    B{fill:#ccf,stroke:#333,text-color:#000}
+    C{fill:#ccf,stroke:#333,text-color:#000}
+    D{fill:#ccf,stroke:#333,text-color:#000}
+    E{fill:#9f9,stroke:#333,text-color:#000}
+    F{fill:#9f9,stroke:#333,text-color:#000}
+    G{fill:#ccf,stroke:#333,text-color:#000}
+    H{fill:#9f9,stroke:#333,text-color:#000}
+    I{fill:#f9f,stroke:#333,text-color:#000}
+endsubgraph
+
+layout: dagre

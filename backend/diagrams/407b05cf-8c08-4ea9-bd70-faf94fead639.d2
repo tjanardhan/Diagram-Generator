@@ -1,0 +1,41 @@
+direction: right
+
+user: {
+  shape: person
+  style: {
+    fill: lightcoral
+  }
+}
+
+movie_listings: {
+  shape: cloud
+  style: {
+    fill: lightblue
+  }
+}
+
+ticket_selection: {
+  shape: rectangle
+  style: {
+    fill: lightyellow
+  }
+}
+
+payment: {
+  shape: parallelogram
+  style: {
+    fill: lightgreen
+  }
+}
+
+confirmation: {
+  shape: document
+  style: {
+    fill: lightpink
+  }
+}
+
+user -> movie_listings: Browse Movies
+movie_listings -> ticket_selection: Select Tickets
+ticket_selection -> payment: Proceed to Payment
+payment -> confirmation: Booking Confirmed

@@ -1,0 +1,20 @@
+direction: down
+
+start: "Start" {shape: hexagon}
+customer: "Customer" {shape: person}
+search_flights: "Search Flights" {shape: cloud}
+select_flight: "Select Flight" {shape: cloud}
+login: "Login/Register" {shape: cloud}
+booking_details: "Enter Booking Details" {shape: document}
+payment: "Make Payment" {shape: package}
+confirmation: "Confirmation" {shape: document}
+end: "End" {shape: hexagon}
+
+start -> customer
+customer -> search_flights
+search_flights -> select_flight
+select_flight -> login
+login -> booking_details
+booking_details -> payment
+payment -> confirmation
+confirmation -> end

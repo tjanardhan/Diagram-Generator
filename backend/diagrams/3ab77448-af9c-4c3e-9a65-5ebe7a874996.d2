@@ -1,0 +1,61 @@
+direction: down
+
+founders: {
+  shape: person
+  label: "Founders"
+}
+
+ceo: {
+  shape: person
+  label: "CEO"
+}
+
+cfo: {
+  shape: person
+  label: "CFO"
+}
+
+vp_engineering: {
+  shape: person
+  label: "VP Engineering"
+}
+
+vp_marketing: {
+  shape: person
+  label: "VP Marketing"
+}
+
+engineering_managers: {
+  shape: person
+  label: "Engineering Managers"
+}
+
+software_engineers: {
+  shape: person
+  label: "Software Engineers"
+}
+
+marketing_managers: {
+  shape: person
+  label: "Marketing Managers"
+}
+
+marketing_specialists: {
+  shape: person
+  label: "Marketing Specialists"
+}
+
+interns: {
+  shape: person
+  label: "Interns"
+}
+
+founders -> ceo
+ceo -> cfo
+ceo -> vp_engineering
+ceo -> vp_marketing
+vp_engineering -> engineering_managers
+engineering_managers -> software_engineers
+vp_marketing -> marketing_managers
+marketing_managers -> marketing_specialists
+marketing_specialists -> interns

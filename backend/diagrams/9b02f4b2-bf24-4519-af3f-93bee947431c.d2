@@ -1,0 +1,16 @@
+direction: right
+
+users: {shape: person}
+restaurants: {shape: package}
+orders: {shape: document}
+payments: {shape: stored_data}
+delivery_tracking: {shape: queue}
+
+users -> orders: places order
+orders -> restaurants: order details
+restaurants -> orders: confirms order
+orders -> payments: payment info
+payments -> orders: payment confirmation
+orders -> delivery_tracking: order status
+delivery_tracking -> users: delivery updates
+restaurants -> delivery_tracking: delivery info

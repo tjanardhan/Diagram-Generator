@@ -1,0 +1,29 @@
+layout: dagre
+Books: {
+  shape: sql_table
+  BookID: int {constraint: primary_key}
+  Title: string
+  Author: string
+  ISBN: string
+  PublicationYear: int
+  AvailableCopies: int
+}
+Members: {
+  shape: sql_table
+  MemberID: int {constraint: primary_key}
+  Name: string
+  Address: string
+  Phone: string
+  Email: string
+}
+Loans: {
+  shape: sql_table
+  LoanID: int {constraint: primary_key}
+  BookID: int
+  MemberID: int
+  LoanDate: date
+  DueDate: date
+  ReturnDate: date
+}
+Books.BookID -> Loans.BookID
+Members.MemberID -> Loans.MemberID

@@ -1,0 +1,25 @@
+direction: down
+start: "Start" {shape: hexagon}
+car_arrives: "Car Arrives" {shape: cloud}
+check_availability: "Check Parking Availability" {shape: diamond}
+space_available: "Space Available?" {shape: diamond}
+assign_space: "Assign Parking Space" {shape: cylinder}
+display_space: "Display Space Number" {shape: cylinder}
+payment: "Payment" {shape: cloud}
+ticket_issued: "Ticket Issued" {shape: cylinder}
+car_leaves: "Car Leaves" {shape: cloud}
+no_space: "No Space Available" {shape: cylinder}
+end: "End" {shape: hexagon}
+
+start -> car_arrives
+car_arrives -> check_availability
+check_availability -> space_available: "Yes"
+check_availability -> no_space: "No"
+space_available -> assign_space: "Yes"
+space_available -> no_space: "No"
+assign_space -> display_space
+display_space -> payment
+payment -> ticket_issued
+ticket_issued -> car_leaves
+car_leaves -> end
+no_space -> end

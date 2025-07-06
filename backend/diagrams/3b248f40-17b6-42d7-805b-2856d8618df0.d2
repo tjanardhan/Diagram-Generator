@@ -1,0 +1,49 @@
+ParkingSpot: {
+  shape: rectangle
+  spot_id: int
+  is_occupied: boolean
+  vehicle_id: int
+}
+
+Vehicle: {
+  shape: cylinder
+  vehicle_id: int
+  license_plate: string
+  vehicle_type: string
+}
+
+Customer: {
+  shape: circle
+  customer_id: int
+  name: string
+  phone_number: string
+}
+
+Payment: {
+  shape: hexagon
+  payment_id: int
+  customer_id: int
+  amount: float
+  payment_method: string
+  transaction_time: timestamp
+}
+
+ParkingSession: {
+  shape: cloud
+  session_id: int
+  customer_id: int
+  vehicle_id: int
+  spot_id: int
+  entry_time: timestamp
+  exit_time: timestamp
+  payment_id: int
+}
+
+ParkingSession.customer_id -> Customer.customer_id
+ParkingSession.vehicle_id -> Vehicle.vehicle_id
+ParkingSession.spot_id -> ParkingSpot.spot_id
+ParkingSession.payment_id -> Payment.payment_id
+ParkingSpot.vehicle_id -> Vehicle.vehicle_id
+Payment.customer_id -> Customer.customer_id
+
+layout: dagre

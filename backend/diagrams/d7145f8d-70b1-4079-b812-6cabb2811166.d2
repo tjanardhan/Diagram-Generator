@@ -1,0 +1,43 @@
+direction: right
+
+users: {
+  shape: person
+  style: {
+    fill: lightcoral
+  }
+}
+
+restaurants: {
+  shape: house
+  style: {
+    fill: lightgreen
+  }
+}
+
+orders: {
+  shape: document
+  style: {
+    fill: lightyellow
+  }
+}
+
+payments: {
+  shape: package
+  style: {
+    fill: lightblue
+  }
+}
+
+delivery_tracking: {
+  shape: cloud
+  style: {
+    fill: lightpink
+  }
+}
+
+users -> orders: places order
+restaurants -> orders: receives order
+orders -> payments: initiates payment
+payments -> orders: confirms payment
+orders -> delivery_tracking: updates status
+delivery_tracking -> users: provides updates

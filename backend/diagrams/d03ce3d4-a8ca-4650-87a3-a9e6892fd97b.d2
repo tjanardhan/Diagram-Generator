@@ -1,0 +1,36 @@
+direction: right
+
+members: {
+  shape: person
+  style: {
+    fill: lightblue
+  }
+}
+
+books: {
+  shape: stored_data
+  style: {
+    fill: lightyellow
+  }
+}
+
+loans: {
+  shape: document
+  style: {
+    fill: lightcoral
+  }
+}
+
+members -> request_loan: requests loan
+request_loan -> librarian: submit request
+librarian -> verify_membership: verify membership
+verify_membership -> check_availability: check availability
+check_availability -> loan_approved: approved
+loan_approved -> issue_book: issue book
+issue_book -> update_records: update records
+update_records -> return_book: return book
+return_book -> librarian: submit return
+librarian -> update_records: update records
+
+check_availability -> loan_rejected: rejected
+loan_rejected -> members: notify rejection

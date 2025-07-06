@@ -1,0 +1,15 @@
+direction: right
+
+users: { shape: person label: "Users" }
+restaurants: { shape: package label: "Restaurants" }
+orders: { shape: document label: "Orders" }
+payments: { shape: stored_data label: "Payments" }
+delivery_tracking: { shape: queue label: "Delivery Tracking" }
+
+users -> orders: "Places Order"
+orders -> restaurants: "Order Details"
+restaurants -> orders: "Order Confirmation/Updates"
+orders -> payments: "Payment Information"
+payments -> orders: "Payment Confirmation"
+orders -> delivery_tracking: "Order Status Updates"
+delivery_tracking -> users: "Delivery Updates"

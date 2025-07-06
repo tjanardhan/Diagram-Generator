@@ -1,0 +1,30 @@
+direction: right
+
+start: "Start" {shape: hexagon style: {fill: lightgreen}}
+add_member: "Add new member" {shape: cloud style: {fill: lightblue}}
+add_book: "Add new book" {shape: cloud style: {fill: lightblue}}
+borrow_book: "Borrow book" {shape: cloud style: {fill: lightblue}}
+return_book: "Return book" {shape: cloud style: {fill: lightblue}}
+search_book: "Search book" {shape: cloud style: {fill: lightblue}}
+search_member: "Search member" {shape: cloud style: {fill: lightblue}}
+display_all_books: "Display all books" {shape: cloud style: {fill: lightblue}}
+display_all_members: "Display all members" {shape: cloud style: {fill: lightblue}}
+end: "End" {shape: hexagon style: {fill: lightcoral}}
+
+start -> add_member
+start -> add_book
+start -> borrow_book
+start -> return_book
+start -> search_book
+start -> search_member
+start -> display_all_books
+start -> display_all_members
+
+add_member -> end
+add_book -> end
+borrow_book -> end
+return_book -> end
+search_book -> end
+search_member -> end
+display_all_books -> end
+display_all_members -> end

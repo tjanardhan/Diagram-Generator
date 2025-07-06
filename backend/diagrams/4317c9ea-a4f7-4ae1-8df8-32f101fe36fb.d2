@@ -1,0 +1,34 @@
+direction: down
+
+website: "Website" {
+  shape: cloud
+  style: {
+    fill: lightblue
+  }
+}
+
+user: "User" {
+  shape: person
+  style: {
+    fill: lightcoral
+  }
+}
+
+parking_lot: "Parking Lot" {
+  shape: rectangle
+  style: {
+    fill: lightgreen
+  }
+}
+
+database: "Database" {
+  shape: cylinder
+  style: {
+    fill: lightyellow
+  }
+}
+
+user -> website: "Accesses"
+website -> parking_lot: "Manages"
+website -> database: "Stores Data"
+parking_lot -> website: "Provides Data"

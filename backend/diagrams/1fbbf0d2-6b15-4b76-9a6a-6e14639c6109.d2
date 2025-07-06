@@ -1,0 +1,75 @@
+direction: down
+
+OSI_Model: "OSI Model" {
+  shape: rectangle
+  style: {
+    fill: lightgrey
+    stroke: darkblue
+    stroke-width: 3
+    shadow: true
+  }
+}
+
+Layer7_Application: "Application Layer (7)" {
+  shape: rectangle
+  style: {
+    fill: lightcoral
+    stroke: darkred
+  }
+}
+
+Layer6_Presentation: "Presentation Layer (6)" {
+  shape: rectangle
+  style: {
+    fill: lightsalmon
+    stroke: darkred
+  }
+}
+
+Layer5_Session: "Session Layer (5)" {
+  shape: rectangle
+  style: {
+    fill: lightgoldenrodyellow
+    stroke: darkorange
+  }
+}
+
+Layer4_Transport: "Transport Layer (4)" {
+  shape: rectangle
+  style: {
+    fill: lightgreen
+    stroke: darkgreen
+  }
+}
+
+Layer3_Network: "Network Layer (3)" {
+  shape: rectangle
+  style: {
+    fill: lightblue
+    stroke: darkblue
+  }
+}
+
+Layer2_Data_Link: "Data Link Layer (2)" {
+  shape: rectangle
+  style: {
+    fill: palegoldenrod
+    stroke: darkgoldenrod
+  }
+}
+
+Layer1_Physical: "Physical Layer (1)" {
+  shape: rectangle
+  style: {
+    fill: lightgrey
+    stroke: darkgrey
+  }
+}
+
+OSI_Model -> Layer7_Application
+Layer7_Application -> Layer6_Presentation
+Layer6_Presentation -> Layer5_Session
+Layer5_Session -> Layer4_Transport
+Layer4_Transport -> Layer3_Network
+Layer3_Network -> Layer2_Data_Link
+Layer2_Data_Link -> Layer1_Physical

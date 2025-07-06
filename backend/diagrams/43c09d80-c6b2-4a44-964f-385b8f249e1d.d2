@@ -1,0 +1,10 @@
+User -> System: Request Book
+System -> Database: Check Availability
+Database -> System: Available/Unavailable
+System -> User: Display Status
+User -> System: Borrow Book
+System -> User: Issue Book/Reject Request
+System -> Database: Update Book Status
+User -> System: Return Book
+System -> Database: Update Book Status
+System -> User: Confirm Return

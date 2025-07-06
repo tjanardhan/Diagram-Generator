@@ -1,0 +1,20 @@
+Member -> Library System: requests book
+Library System -> Database: checks availability
+Database -> Library System: availability status
+Library System -> Member: displays status
+Member -> Library System: borrows book
+Library System -> Database: updates records
+Database -> Library System: confirmation
+Library System -> Member: confirmation
+Member -> Library System: returns book
+Library System -> Database: updates records
+Database -> Library System: confirmation
+Library System -> Member: confirmation
+Librarian -> Library System: adds book
+Library System -> Database: adds record
+Database -> Library System: confirmation
+Library System -> Librarian: confirmation
+Librarian -> Library System: removes book
+Library System -> Database: removes record
+Database -> Library System: confirmation
+Library System -> Librarian: confirmation

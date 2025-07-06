@@ -1,0 +1,63 @@
+direction: right
+
+style: {
+  fill: lightblue
+  stroke: navy
+  stroke-width: 2
+}
+
+external_entities: {
+  shape: cloud
+  label: "External Entities"
+  style: {
+    fill: lightgreen
+  }
+}
+
+processes: {
+  shape: rectangle
+  label: "Hostel Management Processes"
+  style: {
+    fill: lightyellow
+  }
+}
+
+data_stores: {
+  shape: cylinder
+  label: "Data Stores"
+  style: {
+    fill: lightcoral
+  }
+}
+
+external_entities -> processes: "Data Input"
+processes -> data_stores: "Data Storage"
+processes -> external_entities: "Data Output"
+
+processes_details: {
+  shape: rectangle
+  label: "Booking, Check-in/out, Payment, Management"
+  style: {
+    fill: lightcyan
+  }
+}
+
+data_stores_details: {
+  shape: cylinder
+  label: "Reservations, Guests, Rooms, Staff"
+  style: {
+    fill: lightsalmon
+  }
+}
+
+external_entities_details: {
+  shape: cloud
+  label: "Guests, Staff, Admin"
+  style: {
+    fill: lightgreen
+  }
+}
+
+external_entities_details -> processes_details
+processes_details -> data_stores_details
+processes_details -> external_entities_details

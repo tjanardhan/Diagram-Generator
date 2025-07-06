@@ -1,0 +1,37 @@
+subgraph Cluster 0 {
+  label = "Bus Topology";
+  A -- B -- C -- D -- E;
+}
+
+subgraph Cluster 1 {
+  label = "Star Topology";
+  A -- Hub -- B;
+  Hub -- C;
+  Hub -- D;
+  Hub -- E;
+}
+
+subgraph Cluster 2 {
+  label = "Ring Topology";
+  A --> B --> C --> D --> E --> A;
+}
+
+subgraph Cluster 3 {
+  label = "Mesh Topology";
+  A -- B;
+  A -- C;
+  A -- D;
+  B -- C;
+  B -- D;
+  C -- D;
+}
+
+subgraph Cluster 4 {
+  label = "Tree Topology";
+  A -- B;
+  A -- C;
+  B -- D;
+  B -- E;
+  C -- F;
+  C -- G;
+}

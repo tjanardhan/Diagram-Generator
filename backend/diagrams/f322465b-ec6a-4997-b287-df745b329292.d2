@@ -1,0 +1,50 @@
+direction: right
+
+website: {
+  shape: cloud
+  label: "Website"
+  style: {
+    fill: lightblue
+  }
+}
+
+user: {
+  shape: person
+  label: "User"
+  style: {
+    fill: lightpink
+  }
+}
+
+parking_lot: {
+  shape: cylinder
+  label: "Parking Lot"
+  style: {
+    fill: lightcoral
+  }
+}
+
+payment_gateway: {
+  shape: rectangle
+  label: "Payment Gateway"
+  style: {
+    fill: lightyellow
+  }
+}
+
+database: {
+  shape: cylinder
+  label: "Database"
+  style: {
+    fill: lightgreen
+  }
+}
+
+
+user -> website: "Accesses"
+website -> parking_lot: "Parking Status"
+website -> payment_gateway: "Payment Processing"
+website -> database: "Data Storage"
+parking_lot -> website: "Updates"
+payment_gateway -> website: "Payment Confirmation"
+database -> website: "Data Retrieval"

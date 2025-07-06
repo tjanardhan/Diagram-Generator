@@ -1,0 +1,50 @@
+direction: right
+
+Library: {
+  shape: cylinder
+  fill: #f0f0f0
+  stroke: #000
+  LibraryID: int {primaryKey: true}
+  Name: string
+  Address: string
+}
+
+Members: {
+  shape: cloud
+  fill: #e0f0e0
+  stroke: #000
+  MemberID: int {primaryKey: true}
+  Name: string
+  Address: string
+  Phone: string
+  Email: string
+}
+
+Books: {
+  shape: sql_table
+  fill: #fff0f0
+  stroke: #000
+  ISBN: int {primaryKey: true}
+  Title: string
+  Author: string
+  Genre: string
+  PublicationYear: int
+  AvailableCopies: int
+}
+
+Loans: {
+  shape: hexagon
+  fill: #ffffc0
+  stroke: #000
+  LoanID: int {primaryKey: true}
+  MemberID: int {foreignKey: Members.MemberID}
+  ISBN: int {foreignKey: Books.ISBN}
+  LoanDate: date
+  DueDate: date
+  ReturnDate: date
+}
+
+Library -> Members: manages
+Library -> Books: manages
+Members -> Loans: borrows
+Books -> Loans: loaned

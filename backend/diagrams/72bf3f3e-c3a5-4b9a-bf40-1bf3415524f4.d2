@@ -1,0 +1,78 @@
+direction: down
+
+start: "Start" {
+  shape: hexagon
+  style: {
+    fill: lightgreen
+    shadow: true
+  }
+}
+
+add_member: "Add new member" {
+  shape: cloud
+  style: {
+    fill: lightblue
+  }
+}
+
+add_book: "Add new book" {
+  shape: cloud
+  style: {
+    fill: lightblue
+  }
+}
+
+borrow_book: "Borrow book" {
+  shape: cloud
+  style: {
+    fill: lightblue
+  }
+}
+
+return_book: "Return book" {
+  shape: cloud
+  style: {
+    fill: lightblue
+  }
+}
+
+search_book: "Search book" {
+  shape: cloud
+  style: {
+    fill: lightblue
+  }
+}
+
+display_member: "Display member details" {
+  shape: cylinder
+  style: {
+    fill: lightpink
+  }
+}
+
+display_book: "Display book details" {
+  shape: cylinder
+  style: {
+    fill: lightpink
+  }
+}
+
+end: "End" {
+  shape: hexagon
+  style: {
+    fill: lightcoral
+    shadow: true
+  }
+}
+
+start -> add_member
+start -> add_book
+add_member -> borrow_book
+add_book -> borrow_book
+borrow_book -> return_book
+add_book -> search_book
+search_book -> display_book
+add_member -> display_member
+return_book -> end
+display_book -> end
+display_member -> end

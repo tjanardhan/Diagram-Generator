@@ -1,0 +1,8 @@
+Process A -> Resource X: request
+Process B -> Resource Y: request
+Resource X -> Process A: granted
+Resource Y -> Process B: granted
+Process A -> Resource Y: request
+Process B -> Resource X: request
+Resource Y -> Process A: blocked
+Resource X -> Process B: blocked

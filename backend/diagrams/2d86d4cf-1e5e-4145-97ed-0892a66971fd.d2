@@ -1,0 +1,87 @@
+direction: down
+
+start: "Start" {
+  shape: hexagon
+  style: {
+    fill: lightgreen
+    shadow: true
+  }
+}
+
+input_num1: "Input num1" {
+  shape: cloud
+  style: {
+    fill: lightblue
+  }
+}
+
+input_num2: "Input num2" {
+  shape: cloud
+  style: {
+    fill: lightblue
+  }
+}
+
+input_num3: "Input num3" {
+  shape: cloud
+  style: {
+    fill: lightblue
+  }
+}
+
+compare1: "Compare num1 and num2" {
+  shape: diamond
+  style: {
+    fill: lightcoral
+  }
+}
+
+max12_num1: "max = num1" {
+  shape: rectangle
+  style: {
+    fill: lightyellow
+  }
+}
+
+max12_num2: "max = num2" {
+  shape: rectangle
+  style: {
+    fill: lightyellow
+  }
+}
+
+compare2: "Compare max and num3" {
+  shape: diamond
+  style: {
+    fill: lightcoral
+  }
+}
+
+max_final: "max = num3" {
+  shape: rectangle
+  style: {
+    fill: lightyellow
+  }
+}
+
+output: "Output max" {
+  shape: cylinder
+  style: {
+    fill: lightpink
+  }
+}
+
+start -> input_num1
+input_num1 -> input_num2
+input_num2 -> input_num3
+input_num3 -> compare1
+
+compare1 -> max12_num1: "num1 > num2"
+compare1 -> max12_num2: "num1 <= num2"
+
+max12_num1 -> compare2
+max12_num2 -> compare2
+
+compare2 -> output: "max > num3"
+compare2 -> max_final: "max <= num3"
+max_final -> output

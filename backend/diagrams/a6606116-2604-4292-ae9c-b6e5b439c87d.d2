@@ -1,0 +1,35 @@
+ParkingSpot: {
+  shape: sql_table
+  spot_id: int {constraint: primary_key}
+  location: varchar
+  is_occupied: boolean
+}
+
+Vehicle: {
+  shape: sql_table
+  vehicle_id: int {constraint: primary_key}
+  license_plate: varchar
+  vehicle_type: varchar
+}
+
+ParkingTicket: {
+  shape: sql_table
+  ticket_id: int {constraint: primary_key}
+  vehicle_id: int
+  spot_id: int
+  entry_time: timestamp
+  exit_time: timestamp
+  total_fee: decimal
+}
+
+ParkingAttendant: {
+  shape: sql_table
+  attendant_id: int {constraint: primary_key}
+  name: varchar
+}
+
+ParkingTicket.vehicle_id -> Vehicle.vehicle_id
+ParkingTicket.spot_id -> ParkingSpot.spot_id
+ParkingSpot.spot_id -> ParkingTicket.spot_id
+
+layout: dagre

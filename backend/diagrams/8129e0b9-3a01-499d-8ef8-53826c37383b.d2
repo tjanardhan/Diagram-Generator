@@ -1,0 +1,42 @@
+members: {
+  shape: cylinder
+  title: Members
+  attributes: [
+    member_id
+    name
+    address
+    phone
+    email
+  ]
+}
+
+books: {
+  shape: cylinder
+  title: Books
+  attributes: [
+    isbn
+    title
+    author
+    genre
+    publication_year
+    available_copies
+  ]
+}
+
+loans: {
+  shape: cylinder
+  title: Loans
+  attributes: [
+    loan_id
+    member_id
+    isbn
+    loan_date
+    due_date
+    return_date
+  ]
+}
+
+members.member_id -> loans.member_id
+books.isbn -> loans.isbn
+
+layout: dagre

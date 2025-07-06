@@ -1,0 +1,13 @@
+graph LR
+    A[Start] --> B{Input three numbers: num1, num2, num3};
+    B --> C[num1 > num2?];
+    C -- Yes --> D[num1 > num3?];
+    C -- No --> E[num2 > num3?];
+    D -- Yes --> F[Largest = num1];
+    D -- No --> F[Largest = num3];
+    E -- Yes --> F;
+    E -- No --> F[Largest = num3];
+    F --> G[Output Largest];
+    G --> H[End];
+
+layout: dagre

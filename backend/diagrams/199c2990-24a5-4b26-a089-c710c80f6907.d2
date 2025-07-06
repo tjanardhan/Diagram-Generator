@@ -1,0 +1,27 @@
+Here is the code for a flowchart for a Warehouse Management System:
+
+```
+direction: down
+
+start: "Start" { shape: hexagon style: { fill: lightgreen } }
+
+receive_goods: "Receive Goods" { shape: cloud style: { fill: lightblue } }
+store_goods: "Store Goods" { shape: rectangle style: { fill: lightsalmon } }
+issue_goods: "Issue Goods" { shape: rectangle style: { fill: lightyellow } }
+track_inventory: "Track Inventory" { shape: cloud style: { fill: lightblue } }
+
+receive_goods -> store_goods
+store_goods -> track_inventory
+track_inventory -> issue_goods
+issue_goods -> end
+```
+
+This flowchart illustrates the following steps:
+1. Start
+2. Receive goods
+3. Store received goods
+4. Track inventory
+5. Issue goods (retrieve from storage)
+6. End (completion of the process)
+
+Each of these steps is represented by a shape: `hexagon` for the starting point, `cloud` for tasks that involve receiving or sending data, `rectangle` for processing tasks, and `cylinder` is not used in this example.

@@ -1,0 +1,21 @@
+start: {shape: hexagon}
+start -> get_num1: {label: "Get first number"}
+get_num1: {shape: cloud}
+get_num1 -> get_num2: {label: "Get second number"}
+get_num2: {shape: cloud}
+get_num2 -> get_num3: {label: "Get third number"}
+get_num3: {shape: cloud}
+get_num3 -> compare1: {label: "Compare num1 and num2"}
+compare1: {shape: circle}
+compare1 -> compare2: {label: "num1 > num2? Largest = num1", conditional: true}
+compare1 -> compare2_else: {label: "Largest = num2", conditional: false}
+compare2: {shape: diamond}
+compare2 -> compare3: {label: "Compare Largest and num3"}
+compare2_else: {shape: diamond}
+compare2_else -> compare3: {label: "Compare Largest and num3"}
+compare3: {shape: circle}
+compare3 -> output: {label: "Largest = max(Largest, num3)", conditional: true}
+compare3 -> output: {label: "Output Largest", conditional: false}
+output: {shape: cylinder}
+
+layout: dagre

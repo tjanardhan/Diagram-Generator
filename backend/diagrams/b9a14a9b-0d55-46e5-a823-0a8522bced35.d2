@@ -1,0 +1,49 @@
+direction: right
+
+user: {
+  shape: person
+  label: "User"
+  style: {
+    fill: lightcoral
+  }
+}
+
+restaurant: {
+  shape: house
+  label: "Restaurant"
+  style: {
+    fill: lightgreen
+  }
+}
+
+orders: {
+  shape: rectangle
+  label: "Orders"
+  style: {
+    fill: lightyellow
+  }
+}
+
+payments: {
+  shape: cylinder
+  label: "Payments"
+  style: {
+    fill: lightblue
+  }
+}
+
+delivery: {
+  shape: truck
+  label: "Delivery"
+  style: {
+    fill: lightsalmon
+  }
+}
+
+user -> orders: "Places Order"
+orders -> restaurant: "Order Details"
+restaurant -> orders: "Order Confirmation"
+orders -> payments: "Payment Information"
+payments -> orders: "Payment Confirmation"
+orders -> delivery: "Delivery Details"
+delivery -> user: "Order Delivered"

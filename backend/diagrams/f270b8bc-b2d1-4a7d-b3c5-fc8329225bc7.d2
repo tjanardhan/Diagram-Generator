@@ -1,0 +1,49 @@
+direction: right
+
+login: "Login" {
+  shape: hexagon
+  style: {
+    fill: lightgreen
+  }
+}
+
+browse: "Browse Products" {
+  shape: cloud
+  style: {
+    fill: lightblue
+  }
+}
+
+cart: "Add to Cart" {
+  shape: rectangle
+  style: {
+    fill: lightyellow
+  }
+}
+
+checkout: "Checkout" {
+  shape: parallelogram
+  style: {
+    fill: lightcoral
+  }
+}
+
+payment: "Payment" {
+  shape: circle
+  style: {
+    fill: lightpink
+  }
+}
+
+confirmation: "Confirmation" {
+  shape: cylinder
+  style: {
+    fill: lightgray
+  }
+}
+
+login -> browse
+browse -> cart
+cart -> checkout
+checkout -> payment
+payment -> confirmation

@@ -1,0 +1,56 @@
+direction: right
+
+style: {
+  fill: lightblue
+  stroke: navy
+  stroke-width: 2
+}
+
+website: {
+  shape: cloud
+  label: "Parking Lot Management System Website"
+  style: {
+    fill: lightcoral
+  }
+}
+
+user: {
+  shape: person
+  label: "User"
+  style: {
+    fill: lightgreen
+  }
+}
+
+parking_lot: {
+  shape: cylinder
+  label: "Parking Lot"
+  style: {
+    fill: lightpink
+  }
+}
+
+payment_gateway: {
+  shape: database
+  label: "Payment Gateway"
+  style: {
+    fill: lightyellow
+  }
+}
+
+database: {
+  shape: cylinder
+  label: "Database"
+  style: {
+    fill: lightgray
+  }
+}
+
+user -> website: "Accesses Website"
+website -> user: "Displays Information"
+website -> parking_lot: "Manages Parking Spaces"
+website -> payment_gateway: "Processes Payments"
+website -> database: "Stores Data"
+parking_lot -> website: "Provides Status Updates"
+payment_gateway -> website: "Confirms Payments"
+database -> website: "Retrieves Data"

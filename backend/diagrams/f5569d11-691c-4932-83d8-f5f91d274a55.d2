@@ -1,0 +1,19 @@
+direction: right
+
+start: "1996: Google is founded" {shape: hexagon, style: {fill: #4285f4, stroke: #3065b3}}
+pageRank: "1997: PageRank algorithm developed" {shape: rectangle, style: {fill: #fbbc05, stroke: #e1a200}}
+company: "1998: Google Inc. incorporated" {shape: package, style: {fill: #34a853, stroke: #278e46}}
+search: "2000: Google becomes dominant search engine" {shape: cloud, style: {fill: #ea4335, stroke: #d23d2c}}
+mobile: "2007: Android OS launched" {shape: parallelogram, style: {fill: #fb8c00, stroke: #e07b00}}
+ads: "2010: Google Ads becomes major revenue source" {shape: document, style: {fill: #4285f4, stroke: #3065b3}}
+ai: "2010s:  Focus on Artificial Intelligence" {shape: circle, style: {fill: #fbbc05, stroke: #e1a200}}
+now: "Present: Global tech giant" {shape: hexagon, style: {fill: #34a853, stroke: #278e46}}
+
+
+start -> pageRank
+pageRank -> company
+company -> search
+search -> mobile
+mobile -> ads
+ads -> ai
+ai -> now

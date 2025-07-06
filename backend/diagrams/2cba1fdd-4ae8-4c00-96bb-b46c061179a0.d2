@@ -1,0 +1,38 @@
+direction: right
+
+website: {
+  shape: cloud
+  label: "Website"
+  style: {
+    fill: lightblue
+  }
+}
+
+user: {
+  shape: person
+  label: "User"
+  style: {
+    fill: lightgreen
+  }
+}
+
+parking_lot: {
+  shape: cylinder
+  label: "Parking Lot"
+  style: {
+    fill: lightcoral
+  }
+}
+
+database: {
+  shape: database
+  label: "Database"
+  style: {
+    fill: lightyellow
+  }
+}
+
+user -> website: "Accesses"
+website -> parking_lot: "Requests Parking Data"
+parking_lot -> database: "Sends/Receives Data"
+website -> database: "Sends/Receives Data"

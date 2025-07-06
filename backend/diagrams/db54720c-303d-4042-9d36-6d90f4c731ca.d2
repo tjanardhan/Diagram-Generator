@@ -1,0 +1,14 @@
+Class "OOP Concept" {
+  +explaination: String
+}
+
+Object "Class" : Class {
+  explaination: "Blueprint for creating objects"
+}
+
+Object "Object" : Class {
+  explaination: "Instance of a class"
+}
+
+Class -> Object: instantiates
+Class -> Object: creates

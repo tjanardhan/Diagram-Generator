@@ -1,0 +1,19 @@
+direction: down
+
+start: "Start" {shape: hexagon}
+customer_info: "Enter Customer Information" {shape: cloud}
+flight_search: "Search for Flights" {shape: cloud}
+flight_selection: "Select Flight" {shape: diamond}
+seat_selection: "Select Seats" {shape: cloud}
+payment: "Make Payment" {shape: cloud}
+confirmation: "Confirmation" {shape: document}
+end: "End" {shape: hexagon}
+
+start -> customer_info
+customer_info -> flight_search
+flight_search -> flight_selection
+flight_selection -> seat_selection: "Yes"
+flight_selection -> flight_search: "No"
+seat_selection -> payment
+payment -> confirmation
+confirmation -> end

@@ -1,0 +1,11 @@
+d2
+layout: dagre
+start: {shape: circle}
+start -> input_num1: Get Number 1
+input_num1 -> input_num2: Get Number 2
+input_num2 -> input_num3: Get Number 3
+input_num3 -> compare1: Compare num1 and num2
+compare1 -> max1: Assign Larger to max1
+max1 -> compare2: Compare max1 and num3
+compare2 -> max2: Assign Larger to max2
+max2 -> output: Display max2

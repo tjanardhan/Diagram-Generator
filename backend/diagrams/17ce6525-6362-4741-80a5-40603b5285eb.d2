@@ -1,0 +1,27 @@
+direction: right
+
+members: {
+  shape: person
+  label: "Members"
+}
+
+books: {
+  shape: stored_data
+  label: "Books"
+}
+
+library_system: {
+  shape: package
+  label: "Library System"
+}
+
+loans: {
+  shape: document
+  label: "Loans"
+}
+
+members -> library_system: "Registers"
+books -> library_system: "Adds Books"
+library_system -> loans: "Issues Loans"
+library_system -> members: "Provides Info"
+library_system -> books: "Manages Books"

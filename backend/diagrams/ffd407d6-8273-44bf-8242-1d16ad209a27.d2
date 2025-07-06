@@ -1,0 +1,18 @@
+User -> Reception: Check-in Request
+Reception -> Database: Check Availability
+Database -> Reception: Availability Status
+Reception --[Available]--> User: Assign Room
+Reception --[Not Available]--> User: Show Alternative or Reject
+User -> Reception: Payment
+Reception -> Payment Gateway: Process Payment
+Payment Gateway -> Reception: Payment Confirmation
+Reception -> Database: Update Room Status
+Reception -> User: Provide Room Key/Access
+User -> Room
+User -> Reception: Check-out Request
+Reception -> Database: Update Room Status
+Reception -> User: Generate Bill
+User -> Reception: Make Payment
+Reception -> Payment Gateway: Process Payment
+Payment Gateway -> Reception: Payment Confirmation
+Reception -> User: Confirm Check-out

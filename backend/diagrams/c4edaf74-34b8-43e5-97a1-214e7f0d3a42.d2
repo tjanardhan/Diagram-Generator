@@ -1,0 +1,71 @@
+direction: down
+
+application: {
+  shape: cloud
+  label: "Application Layer"
+  style: {
+    fill: lightcoral
+    shadow: true
+  }
+}
+
+presentation: {
+  shape: cloud
+  label: "Presentation Layer"
+  style: {
+    fill: lightblue
+    shadow: true
+  }
+}
+
+session: {
+  shape: cloud
+  label: "Session Layer"
+  style: {
+    fill: lightgreen
+    shadow: true
+  }
+}
+
+transport: {
+  shape: cloud
+  label: "Transport Layer"
+  style: {
+    fill: lightyellow
+    shadow: true
+  }
+}
+
+network: {
+  shape: cloud
+  label: "Network Layer"
+  style: {
+    fill: lightpink
+    shadow: true
+  }
+}
+
+datalink: {
+  shape: cloud
+  label: "Data Link Layer"
+  style: {
+    fill: lavender
+    shadow: true
+  }
+}
+
+physical: {
+  shape: cloud
+  label: "Physical Layer"
+  style: {
+    fill: lightcyan
+    shadow: true
+  }
+}
+
+application -> presentation
+presentation -> session
+session -> transport
+transport -> network
+network -> datalink
+datalink -> physical

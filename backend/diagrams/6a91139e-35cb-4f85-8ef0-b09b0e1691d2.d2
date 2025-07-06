@@ -1,0 +1,7 @@
+graph LR
+A[Start] --> B{Input num1, num2};
+B -- num1 > num2 --> C[num1 is largest];
+B -- num1 <= num2 --> D[num2 is largest];
+C --> E[Output largest number];
+D --> E;
+E --> F[End];

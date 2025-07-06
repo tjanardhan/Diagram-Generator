@@ -1,0 +1,15 @@
+diagram "Finding Greatest Number" {
+  layout: dagre
+
+  start [label: "Start", shape: circle, fill: "#28a745"] -> input1;
+  input1 [label: "Input Number 1"] -> compare1;
+  input2 [label: "Input Number 2"] -> compare1;
+  input3 [label: "Input Number 3"] -> compare1;
+
+
+  compare1 [label: "Compare 1 & 2", shape: hexagon] -> compare2;
+
+  compare2 [label: "Compare max(1,2) & 3", shape: hexagon] -> output;
+
+  output [label: "Output Greatest Number", shape: circle, fill: "#dc3545"]
+}

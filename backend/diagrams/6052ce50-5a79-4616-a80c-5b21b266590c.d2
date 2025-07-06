@@ -1,0 +1,25 @@
+Here is a D2 diagram code example for a Warehouse Management System:
+
+```D2
+direction: down
+
+warehouse: {label: "Warehouse", shape: rectangle}
+inventory: {label: "Inventory Management System", shape: cylinder}
+picking: {label: "Picking Operations", shape: hexagon}
+packing: {label: "Packing", shape: parallelogram}
+shipping: {label: "Shipping", shape: square}
+receiving: {label: "Receiving", shape: oval}
+admin: {label: "Administration", shape: document}
+
+warehouse -> inventory
+inventory -> picking
+picking -> packing
+packing -> shipping
+shipping -> onclick: "Shipping Operation" {shape: cloud, style: {fill: lightblue}}
+shipping -> admin
+receiving -> onclick: "Receiving Operation" {shape: cloud, style: {fill: lightgreen}}
+receiving -> admin
+admin -> inventory
+```
+
+This flowchart illustrates the workflow of a Warehouse Management System, where incoming inventory is managed by receiving, the system performs picking and packing operations, and outgoing inventory is shipped, all under administration control.

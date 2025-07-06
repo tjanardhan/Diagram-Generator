@@ -1,0 +1,12 @@
+direction: right
+Library: {shape: cylinder}
+Members: {shape: sql_table}
+Books: {shape: sql_table}
+Loans: {shape: sql_table}
+
+Library -> Members: manages
+Library -> Books: manages
+Library -> Loans: manages
+
+Members -> Loans: borrows
+Books -> Loans: included_in

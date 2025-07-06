@@ -1,0 +1,21 @@
+graph LR
+    A[User] --> B(Website);
+    B --> C{Login};
+    C -- Success --> D[Dashboard];
+    C -- Fail --> E[Error];
+    D --> F{Search Parking};
+    F --> G[Parking List];
+    G --> H{Reserve Parking};
+    H -- Success --> I[Confirmation];
+    H -- Fail --> J[Error];
+    I --> K{Payment};
+    K -- Success --> L[Parking Ticket];
+    K -- Fail --> M[Error];
+    D --> N{View Bookings};
+    N --> O[Booking Details];
+    D --> P{Manage Account};
+    P --> Q[Account Settings];
+    subgraph " "
+        A;B;C;D;E;F;G;H;I;J;K;L;M;N;O;P;Q
+    end
+    layout: dagre

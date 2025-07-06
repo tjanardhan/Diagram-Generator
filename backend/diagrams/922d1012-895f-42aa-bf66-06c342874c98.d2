@@ -1,0 +1,21 @@
+direction: down
+
+start: "Start" {shape: hexagon}
+get_num1: "Get first number" {shape: cloud}
+get_num2: "Get second number" {shape: cloud}
+get_num3: "Get third number" {shape: cloud}
+compare1: "Compare num1 and num2" {shape: circle}
+compare2: "num1 > num2?" {shape: diamond}
+compare2_else: "num1 <= num2?" {shape: diamond}
+compare3: "Compare Largest and num3" {shape: circle}
+output: "Output Largest" {shape: cylinder}
+
+start -> get_num1
+get_num1 -> get_num2
+get_num2 -> get_num3
+get_num3 -> compare1
+compare1 -> compare2
+compare1 -> compare2_else
+compare2 -> compare3: "Yes (Largest = num1)"
+compare2_else -> compare3: "Largest = num2"
+compare3 -> output

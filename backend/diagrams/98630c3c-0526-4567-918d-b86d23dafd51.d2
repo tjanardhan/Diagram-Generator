@@ -1,0 +1,16 @@
+direction: right
+
+start: "Inception" {shape: hexagon, style: {fill: #FFD700, shadow: true}}
+research: "Early Research & Development" {shape: cloud, style: {fill: #007bff, shadow: true}}
+beta: "Beta Testing & Initial Release" {shape: package, style: {fill: #28a745, shadow: true}}
+growth: "Rapid Growth & Expansion" {shape: parallelogram, style: {fill: #dc3545, shadow: true}}
+innovation: "Continuous Innovation & New Products" {shape: rectangle, style: {fill: #17a2b8, shadow: true}}
+global: "Global Dominance & Market Leader" {shape: cylinder, style: {fill: #ffc107, shadow: true}}
+future: "Future of Google" {shape: cloud, style: {fill: #6c757d, shadow: true}}
+
+start -> research
+research -> beta
+beta -> growth
+growth -> innovation
+innovation -> global
+global -> future

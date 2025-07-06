@@ -1,0 +1,76 @@
+direction: down
+
+start: "Start" {
+  shape: hexagon
+  style: {
+    fill: lightgreen
+    shadow: true
+  }
+}
+
+user_arrives: "User Arrives at Website" {
+  shape: cloud
+  style: {
+    fill: lightblue
+  }
+}
+
+search_parking: "Search for Available Parking" {
+  shape: rectangle
+  style: {
+    fill: lightyellow
+  }
+}
+
+parking_found: "Parking Found?" {
+  shape: diamond
+  style: {
+    fill: lightcoral
+  }
+}
+
+reserve_parking: "Reserve Parking Spot" {
+  shape: rectangle
+  style: {
+    fill: lightyellow
+  }
+}
+
+payment: "Payment Processing" {
+  shape: rectangle
+  style: {
+    fill: lightcoral
+  }
+}
+
+parking_confirmation: "Parking Confirmed" {
+  shape: cylinder
+  style: {
+    fill: lightpink
+  }
+}
+
+no_parking: "No Parking Available" {
+  shape: rectangle
+  style: {
+    fill: lightgrey
+  }
+}
+
+end: "End" {
+  shape: hexagon
+  style: {
+    fill: lightgreen
+    shadow: true
+  }
+}
+
+start -> user_arrives
+user_arrives -> search_parking
+search_parking -> parking_found
+parking_found -> reserve_parking: "yes"
+parking_found -> no_parking: "no"
+reserve_parking -> payment
+payment -> parking_confirmation
+no_parking -> end
+parking_confirmation -> end

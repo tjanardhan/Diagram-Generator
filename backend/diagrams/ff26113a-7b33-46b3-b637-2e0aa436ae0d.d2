@@ -1,0 +1,67 @@
+direction: down
+
+start: "Start" {
+  shape: hexagon
+  style: {
+    fill: lightgreen
+    shadow: true
+  }
+}
+
+customer_input: "Customer Input" {
+  shape: cloud
+  style: {
+    fill: lightblue
+  }
+}
+
+flight_search: "Search Flights" {
+  shape: rectangle
+  style: {
+    fill: lightyellow
+  }
+}
+
+flight_selection: "Select Flight" {
+  shape: rectangle
+  style: {
+    fill: lightyellow
+  }
+}
+
+passenger_details: "Enter Passenger Details" {
+  shape: rectangle
+  style: {
+    fill: lightyellow
+  }
+}
+
+payment: "Make Payment" {
+  shape: rectangle
+  style: {
+    fill: lightyellow
+  }
+}
+
+confirmation: "Confirmation" {
+  shape: document
+  style: {
+    fill: lightpink
+  }
+}
+
+end: "End" {
+  shape: hexagon
+  style: {
+    fill: lightgreen
+    shadow: true
+  }
+}
+
+start -> customer_input
+customer_input -> flight_search
+flight_search -> flight_selection
+flight_selection -> passenger_details
+passenger_details -> payment
+payment -> confirmation
+confirmation -> end

@@ -1,0 +1,23 @@
+direction: down
+
+start: "Start" {shape: hexagon}
+receive_goods: "Receive Goods" {shape: cloud}
+check_quality: "Check Quality" {shape: diamond}
+reject_goods: "Reject Goods" {shape: parallelogram}
+store_goods: "Store Goods" {shape: rectangle}
+manage_inventory: "Manage Inventory" {shape: rectangle}
+pick_order: "Pick Order" {shape: cloud}
+pack_order: "Pack Order" {shape: rectangle}
+ship_order: "Ship Order" {shape: rectangle}
+end: "End" {shape: hexagon}
+
+start -> receive_goods
+receive_goods -> check_quality
+check_quality -> reject_goods: "No"
+check_quality -> store_goods: "Yes"
+reject_goods -> end
+store_goods -> manage_inventory
+manage_inventory -> pick_order
+pick_order -> pack_order
+pack_order -> ship_order
+ship_order -> end

@@ -1,0 +1,72 @@
+direction: right
+
+style: {
+  fill: lightblue
+  stroke: navy
+  stroke-width: 2
+}
+
+medicines: {
+  shape: sql_table
+  label: "Medicines"
+  columns: [
+    "medicine_id (PK)"
+    "name"
+    "manufacturer"
+    "dosage"
+    "unit_price"
+    "quantity_in_stock"
+  ]
+  style: {
+    fill: lightgreen
+  }
+}
+
+customers: {
+  shape: sql_table
+  label: "Customers"
+  columns: [
+    "customer_id (PK)"
+    "name"
+    "address"
+    "phone_number"
+  ]
+  style: {
+    fill: lightyellow
+  }
+}
+
+employees: {
+  shape: sql_table
+  label: "Employees"
+  columns: [
+    "employee_id (PK)"
+    "name"
+    "role"
+    "salary"
+  ]
+  style: {
+    fill: lightcoral
+  }
+}
+
+sales: {
+  shape: sql_table
+  label: "Sales"
+  columns: [
+    "sale_id (PK)"
+    "customer_id (FK)"
+    "employee_id (FK)"
+    "medicine_id (FK)"
+    "sale_date"
+    "quantity_sold"
+    "total_price"
+  ]
+  style: {
+    fill: lightpink
+  }
+}
+
+medicines -> sales
+customers -> sales
+employees -> sales

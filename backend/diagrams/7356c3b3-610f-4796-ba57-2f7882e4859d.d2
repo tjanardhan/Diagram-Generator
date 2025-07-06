@@ -1,0 +1,81 @@
+direction: down
+
+founders: {
+  shape: person
+  style: {
+    fill: lightcoral
+    shadow: true
+  }
+  label: "Founders"
+}
+
+ceo: {
+  shape: person
+  style: {
+    fill: gold
+    shadow: true
+  }
+  label: "CEO"
+}
+
+cfo: {
+  shape: person
+  style: {
+    fill: lightgreen
+    shadow: true
+  }
+  label: "CFO"
+}
+
+vp: {
+  shape: person
+  style: {
+    fill: lightskyblue
+    shadow: true
+  }
+  label: "VPs"
+}
+
+managers: {
+  shape: person
+  style: {
+    fill: lightpink
+    shadow: true
+  }
+  label: "Managers"
+}
+
+team_leads: {
+  shape: person
+  style: {
+    fill: lavender
+    shadow: true
+  }
+  label: "Team Leads"
+}
+
+employees: {
+  shape: person
+  style: {
+    fill: lightblue
+    shadow: true
+  }
+  label: "Employees"
+}
+
+interns: {
+  shape: person
+  style: {
+    fill: lightgray
+    shadow: true
+  }
+  label: "Interns"
+}
+
+founders -> ceo
+ceo -> cfo
+ceo -> vp
+vp -> managers
+managers -> team_leads
+team_leads -> employees
+employees -> interns

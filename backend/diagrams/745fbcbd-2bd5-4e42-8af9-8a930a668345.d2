@@ -1,0 +1,63 @@
+direction: right
+
+Library: {
+  shape: cylinder
+  fill: lightblue
+  stroke: navy
+  label: "Library"
+  attributes: [
+    "library_id (PK)"
+    "library_name"
+    "address"
+    "phone"
+  ]
+}
+
+Members: {
+  shape: person
+  fill: lightgreen
+  stroke: darkgreen
+  label: "Members"
+  attributes: [
+    "member_id (PK)"
+    "name"
+    "address"
+    "phone"
+    "email"
+  ]
+}
+
+Books: {
+  shape: sql_table
+  fill: lightyellow
+  stroke: orange
+  label: "Books"
+  attributes: [
+    "isbn (PK)"
+    "title"
+    "author"
+    "genre"
+    "publication_year"
+    "available_copies"
+  ]
+}
+
+Loans: {
+  shape: document
+  fill: pink
+  stroke: purple
+  label: "Loans"
+  attributes: [
+    "loan_id (PK)"
+    "member_id (FK)"
+    "isbn (FK)"
+    "loan_date"
+    "due_date"
+    "return_date"
+  ]
+}
+
+Library -> Members: manages
+Library -> Books: houses
+Members -> Loans: borrows
+Books -> Loans: loaned

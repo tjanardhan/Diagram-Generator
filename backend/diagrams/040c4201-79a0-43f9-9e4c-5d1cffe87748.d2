@@ -1,0 +1,20 @@
+User: {
+  shape: circle
+  fill: "#007bff"
+}
+Router: {
+  shape: cylinder
+  fill: "#28a745"
+}
+Firewall: {
+  shape: hexagon
+  fill: "#dc3545"
+}
+Internet: {
+  shape: cloud
+  fill: "#ffc107"
+}
+User -> Router: connects
+Router -> Firewall: forwards traffic
+Firewall -> Internet: allows access
+layout: dagre

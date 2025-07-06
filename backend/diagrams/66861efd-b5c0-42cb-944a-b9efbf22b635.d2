@@ -1,0 +1,48 @@
+direction: right
+
+books: {
+  shape: sql_table
+  fill: lightblue
+  stroke: navy
+  label: "Books"
+  columns: [
+    "isbn (PK)"
+    "title"
+    "author"
+    "genre"
+    "publication_year"
+    "available_copies"
+  ]
+}
+
+members: {
+  shape: sql_table
+  fill: lightgreen
+  stroke: darkgreen
+  label: "Members"
+  columns: [
+    "member_id (PK)"
+    "name"
+    "address"
+    "phone"
+    "email"
+  ]
+}
+
+loans: {
+  shape: sql_table
+  fill: lightyellow
+  stroke: orange
+  label: "Loans"
+  columns: [
+    "loan_id (PK)"
+    "member_id (FK)"
+    "isbn (FK)"
+    "loan_date"
+    "due_date"
+    "return_date"
+  ]
+}
+
+books -> loans
+members -> loans

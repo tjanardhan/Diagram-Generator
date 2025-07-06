@@ -1,0 +1,34 @@
+direction: right
+
+user: {
+  shape: person
+  label: "User"
+}
+
+restaurant: {
+  shape: house
+  label: "Restaurant"
+}
+
+order: {
+  shape: rectangle
+  label: "Order"
+}
+
+payment: {
+  shape: creditcard
+  label: "Payment"
+}
+
+delivery: {
+  shape: truck
+  label: "Delivery"
+}
+
+user -> order: places order
+order -> restaurant: order details
+restaurant -> order: confirms order
+order -> payment: payment information
+payment -> order: payment confirmation
+order -> delivery: delivery information
+delivery -> user: delivers food

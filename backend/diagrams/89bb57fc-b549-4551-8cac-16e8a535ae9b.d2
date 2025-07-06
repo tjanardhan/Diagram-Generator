@@ -1,0 +1,9 @@
+LibraryMember || memberID | name | address | phone
+LibraryMember *--1 BookLoan : borrows
+BookLoan || loanID | loanDate | returnDate
+Book || bookID | title | author | ISBN
+BookLoan 1--1 Book : contains
+Book 1--* BookCopy : has
+BookCopy || copyID | status
+Author || authorID | authorName
+Book 1--1 Author : writtenBy

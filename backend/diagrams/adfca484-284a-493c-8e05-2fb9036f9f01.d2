@@ -1,0 +1,61 @@
+direction: down
+
+start: "Start" {
+  shape: hexagon
+  style: {
+    fill: lightgreen
+    shadow: true
+  }
+}
+
+input_num1: "Input num1" {
+  shape: cloud
+  style: {
+    fill: lightblue
+  }
+}
+
+input_num2: "Input num2" {
+  shape: cloud
+  style: {
+    fill: lightblue
+  }
+}
+
+compare: "Is num1 > num2?" {
+  shape: diamond
+  style: {
+    fill: lightcoral
+  }
+}
+
+set_max_num1: "Set max = num1" {
+  shape: rectangle
+  style: {
+    fill: lightyellow
+  }
+}
+
+set_max_num2: "Set max = num2" {
+  shape: rectangle
+  style: {
+    fill: lightyellow
+  }
+}
+
+output: "Output max" {
+  shape: cylinder
+  style: {
+    fill: lightpink
+  }
+}
+
+start -> input_num1
+input_num1 -> input_num2
+input_num2 -> compare
+
+compare -> set_max_num1: "yes"
+compare -> set_max_num2: "no"
+
+set_max_num1 -> output
+set_max_num2 -> output

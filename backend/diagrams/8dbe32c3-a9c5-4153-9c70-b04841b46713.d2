@@ -1,0 +1,10 @@
+College --o{ Student : enrolls
+College --o{ Librarian : employs
+College --o{ Professor : employs
+Student --o{ Borrows : borrows
+Borrows --o{ Book : book
+Professor --o{ Teaches : teaches
+Teaches --o{ Course : course
+Book --o{ Course : required_for
+Librarian --o{ Manages : manages
+Manages --o{ Book : manages

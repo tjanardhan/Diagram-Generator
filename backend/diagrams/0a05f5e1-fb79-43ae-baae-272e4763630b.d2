@@ -1,0 +1,18 @@
+Buyer -> Search: search products
+Search -> Product Catalog: retrieve products
+Buyer -> Product Catalog: browse products
+Product Catalog -> Buyer: display products
+Buyer -> Product: select product
+Product -> Shopping Cart: add to cart
+Buyer -> Shopping Cart: view cart
+Shopping Cart -> Buyer: display cart contents
+Buyer -> Checkout: proceed to checkout
+Checkout -> Payment Gateway: process payment
+Payment Gateway -> Checkout: confirm payment
+Checkout -> Order Management: create order
+Order Management -> Seller: dispatch order
+Seller -> Shipping: ship order
+Shipping -> Buyer: deliver order
+Buyer -> Reviews: leave review
+Reviews -> Product: update rating
+Seller -> Product Catalog: manage products

@@ -1,0 +1,41 @@
+direction: right
+
+teachers: {
+  shape: person
+  style: {
+    fill: lightcoral
+  }
+}
+
+attendance_data: {
+  shape: package
+  style: {
+    fill: lightblue
+  }
+}
+
+students: {
+  shape: person
+  style: {
+    fill: lightgreen
+  }
+}
+
+parents: {
+  shape: person
+  style: {
+    fill: lightyellow
+  }
+}
+
+reports: {
+  shape: document
+  style: {
+    fill: lightpink
+  }
+}
+
+teachers -> attendance_data: records attendance
+attendance_data -> students: sends to students
+attendance_data -> parents: sends to parents
+attendance_data -> reports: generates reports

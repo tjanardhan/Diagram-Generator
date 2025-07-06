@@ -1,0 +1,62 @@
+direction: right
+
+patients: {
+  shape: person
+  style: {
+    fill: lightcoral
+  }
+  attributes: [
+    "patient_id (PK)"
+    "name"
+    "date_of_birth"
+    "address"
+    "phone"
+    "insurance_provider"
+  ]
+}
+
+doctors: {
+  shape: person
+  style: {
+    fill: lightgreen
+  }
+  attributes: [
+    "doctor_id (PK)"
+    "name"
+    "speciality"
+    "years_of_experience"
+  ]
+}
+
+appointments: {
+  shape: document
+  style: {
+    fill: lightblue
+  }
+  attributes: [
+    "appointment_id (PK)"
+    "patient_id (FK)"
+    "doctor_id (FK)"
+    "appointment_date"
+    "appointment_time"
+    "reason_for_visit"
+  ]
+}
+
+medical_records: {
+  shape: stored_data
+  style: {
+    fill: lightyellow
+  }
+  attributes: [
+    "record_id (PK)"
+    "patient_id (FK)"
+    "diagnosis"
+    "treatment"
+    "test_results"
+  ]
+}
+
+patients -> appointments
+doctors -> appointments
+patients -> medical_records

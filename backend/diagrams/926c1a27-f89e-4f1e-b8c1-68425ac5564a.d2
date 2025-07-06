@@ -1,0 +1,24 @@
+d2
+direction: down
+
+start: "Start"
+input: "Input A, B, C"
+cond1: "Is A > B?"
+cond2: "Is A > C?"
+cond3: "Is B > C?"
+a_greatest: "A is the greatest"
+b_greatest: "B is the greatest"
+c_greatest: "C is the greatest"
+end: "End"
+
+start -> input
+input -> cond1
+cond1 -> cond2: Yes
+cond1 -> cond3: No
+cond2 -> a_greatest: Yes
+cond2 -> c_greatest: No
+cond3 -> b_greatest: Yes
+cond3 -> c_greatest: No
+a_greatest -> end
+b_greatest -> end
+c_greatest -> end

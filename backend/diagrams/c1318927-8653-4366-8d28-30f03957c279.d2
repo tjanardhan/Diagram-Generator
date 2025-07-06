@@ -1,0 +1,6 @@
+layout: dagre
+books: {shape: sql_table, title: Books, isbn: {type: INT, constraint:primaryKey}, title: {type: VARCHAR}, author: {type: VARCHAR}, genre: {type: VARCHAR}, publication_year: {type: INT}, available_copies: {type: INT}}
+members: {shape: sql_table, title: Members, member_id: {type: INT, constraint:primaryKey}, name: {type: VARCHAR}, address: {type: VARCHAR}, phone: {type: VARCHAR}, email: {type: VARCHAR}}
+loans: {shape: sql_table, title: Loans, loan_id: {type: INT, constraint:primaryKey}, member_id: {type: INT}, isbn: {type: INT}, loan_date: {type: DATE}, due_date: {type: DATE}, return_date: {type: DATE}}
+books.isbn -> loans.isbn
+members.member_id -> loans.member_id
